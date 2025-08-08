@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const ProductController = require('../controllers/product.controller');
 
+
+// View Routes
+router.get('/view', ProductController.renderList);
+router.get('/view/:id', ProductController.renderDetail);
+
+
 /**
  * @swagger
  * tags:
@@ -145,8 +151,6 @@ router.delete('/:id', ProductController.softDelete);
  */
 router.put('/restore/:id', ProductController.restore);
 
+
 module.exports = router;
 
-// View Routes
-router.get('/view', ProductController.renderList);
-router.get('/view/:id', ProductController.renderDetail);
