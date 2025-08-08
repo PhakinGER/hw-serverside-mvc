@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Detail</title>
+</head>
+<body>
+  <h1><%= product.name %></h1>
+  <p><strong>Price:</strong> ฿<%= product.price %></p>
+  <p><strong>Discount:</strong> <%= product.discount %>%</p>
+  <p><strong>Review Count:</strong> <%= product.review_count %></p>
+  <p><strong>Image URL:</strong> <%= product.image_url %></p>
+  <a href="/products/view"> Back to list</a>
+</body>
+</html>
